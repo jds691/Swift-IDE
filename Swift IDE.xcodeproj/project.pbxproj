@@ -23,6 +23,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		681925FF2D7E0FCA0046D920 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		681925AB2D7E06930046D920 /* Swift IDE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift IDE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		681925BF2D7E06960046D920 /* Swift IDETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift IDETests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +128,7 @@
 				681925A72D7E06930046D920 /* Sources */,
 				681925A82D7E06930046D920 /* Frameworks */,
 				681925A92D7E06930046D920 /* Resources */,
+				681925FF2D7E0FCA0046D920 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
