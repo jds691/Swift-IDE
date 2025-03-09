@@ -19,7 +19,7 @@ struct RootView: View {
     var body: some View {
         HSplitView {
             EditorView(document: $document)
-            OutputView()
+            OutputView(document: $document)
         }
         .toolbar {
             ToolbarItemGroup(placement: .primaryAction) {

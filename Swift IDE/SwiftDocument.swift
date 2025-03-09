@@ -44,4 +44,10 @@ struct SwiftDocument: FileDocument {
         
         return currentIndex
     }
+    
+    func getIndexAt(line: Int, column: Int) -> String.Index {
+        let textLines = text.split(omittingEmptySubsequences: false, whereSeparator: \.isNewline)
+        
+        return text.index(textLines[line - 1].startIndex, offsetBy: column - 1)
+    }
 }

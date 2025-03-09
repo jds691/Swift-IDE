@@ -10,12 +10,21 @@ import SwiftUI
 struct OutputView: View {
     @Environment(EditorContext.self) private var context
     
+    @Binding var document: SwiftDocument
+    
+    @State private var selectedOutput: Int = 0
+    
     var body: some View {
         VStack(alignment: .leading) {
             List {
                 ForEach(context.scriptOutput, id: \.message) { output in
                     Text(output.message)
                         .foregroundStyle(output.isError ? .red : .primary)
+                        .onTapGesture {
+                            if let selection = output.relevantSelection {
+                                handleTextNavigation(to: selection)
+                            }
+                        }
                 }
             }
             Group {
@@ -37,10 +46,19 @@ struct OutputView: View {
             .padding(.bottom, 4)
             .frame(maxWidth: .infinity)
         }
+        .onChange(of: selectedOutput) {
+            print(selectedOutput)
+        }
+    }
+    
+    private func handleTextNavigation(to lineCol: String) {
+        let components = lineCol.split(separator: ":")
+        let index: String.Index = document.getIndexAt(line: Int(components[0])!, column: Int(components[1])!)
+        context.editorTextSelection = TextSelection(insertionPoint: index)
     }
 }
 
 #Preview {
-    OutputView()
+    OutputView(document: .constant(SwiftDocument()))
         .environment(EditorContext())
 }

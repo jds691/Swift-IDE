@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct EditorView: View {
+    @Environment(EditorContext.self) private var context: EditorContext
     @Binding var document: SwiftDocument
     
     var body: some View {
-        TextEditor(text: $document.text)
+        @Bindable var bindableContext = context
+        
+        TextEditor(text: $document.text, selection: $bindableContext.editorTextSelection)
             .font(.custom("SF Mono", size: 12))
     }
 }

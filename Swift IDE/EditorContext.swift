@@ -11,6 +11,7 @@ import SwiftUI
 struct ScriptOutput {
     var message: String
     var isError: Bool
+    var relevantSelection: String?
 }
 
 @Observable
@@ -20,6 +21,8 @@ public class EditorContext {
     var isScriptRunning: Bool = false
     var scriptOutput: [ScriptOutput] = []
     var scriptExitCode: Int32? = nil
+    
+    var editorTextSelection: TextSelection?
     
     /// Executes a swift source file and monitors it
     /// - Parameter fileURL: URL of the swift file to execute
@@ -71,7 +74,10 @@ public class EditorContext {
             // Update your view with the new text here
             if isError {
                 print("New error: \(line)")
-                scriptOutput.append(ScriptOutput(message: line, isError: true))
+                let components = line.split(separator: ":")
+                let errorOrigin: String = "\(components[1]):\(components[2])"
+                print(errorOrigin)
+                scriptOutput.append(ScriptOutput(message: line, isError: true, relevantSelection: errorOrigin))
             } else {
                 print("New ouput: \(line)")
                 scriptOutput.append(ScriptOutput(message: line, isError: false))
