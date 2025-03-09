@@ -30,4 +30,18 @@ struct SwiftDocument: FileDocument {
         let data = text.data(using: .utf8)!
         return .init(regularFileWithContents: data)
     }
+    
+    func getIndexAt(line: Int, column: Int) -> Int {
+        let textLines = text.split(omittingEmptySubsequences: false, whereSeparator: \.isNewline)
+        
+        var currentIndex: Int = 0
+        
+        for i in 0...line - 2 {
+            currentIndex += textLines[i].count
+        }
+        
+        currentIndex += column - 1
+        
+        return currentIndex
+    }
 }
