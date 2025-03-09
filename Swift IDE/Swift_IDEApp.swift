@@ -12,6 +12,7 @@ struct Swift_IDEApp: App {
     var body: some Scene {
         DocumentGroup(newDocument: SwiftDocument()) { file in
             RootView(document: file.$document)
+                .environment(EditorContext())
         }
     }
 }
