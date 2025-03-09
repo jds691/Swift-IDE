@@ -19,6 +19,7 @@ public class EditorContext {
     
     var isScriptRunning: Bool = false
     var scriptOutput: [ScriptOutput] = []
+    var scriptExitCode: Int32? = nil
     
     /// Executes a swift source file and monitors it
     /// - Parameter fileURL: URL of the swift file to execute
@@ -48,6 +49,7 @@ public class EditorContext {
         currentProcess.standardError = standardErrPipe
         currentProcess.terminationHandler = { process in
             self.isScriptRunning = false
+            self.scriptExitCode = process.terminationStatus
         }
         
         do {
