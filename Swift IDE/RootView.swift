@@ -37,10 +37,12 @@ struct RootView: View {
                     }
                 }
                 
-                Button {
-                    
-                } label: {
-                    Label("Terminate", systemImage: "stop.fill")
+                if context.isScriptRunning {
+                    Button {
+                        context.terminateScript()
+                    } label: {
+                        Label("Terminate", systemImage: "stop.fill")
+                    }
                 }
             }
         }

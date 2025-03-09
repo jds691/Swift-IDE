@@ -60,6 +60,12 @@ public class EditorContext {
         }
     }
     
+    public func terminateScript() {
+        if let currentProcess {
+            currentProcess.terminate()
+        }
+    }
+    
     private func handleProcessOutput(_ handle: FileHandle, isError: Bool) {
         if let line = String(data: handle.availableData, encoding: .utf8), !line.isEmpty {
             // Update your view with the new text here
