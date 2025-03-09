@@ -11,7 +11,7 @@ import UniformTypeIdentifiers
 struct SwiftDocument: FileDocument {
     var text: String
 
-    init(text: String = "Hello, world!") {
+    init(text: String = "print(\"Hello, world!\")") {
         self.text = text
     }
 
