@@ -73,15 +73,11 @@ public class EditorContext {
     
     private func handleProcessOutput(_ handle: FileHandle, isError: Bool) {
         if let line = String(data: handle.availableData, encoding: .utf8), !line.isEmpty {
-            // Update your view with the new text here
             if isError {
-                print("New error: \(line)")
                 let components = line.split(separator: ":")
                 let errorOrigin: String = "\(components[1]):\(components[2])"
-                print(errorOrigin)
                 scriptOutput.append(ScriptOutput(message: line, isError: true, relevantSelection: errorOrigin))
             } else {
-                print("New ouput: \(line)")
                 scriptOutput.append(ScriptOutput(message: line, isError: false))
             }
         }
