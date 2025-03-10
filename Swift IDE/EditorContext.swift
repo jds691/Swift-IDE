@@ -30,6 +30,7 @@ public class EditorContext {
     /// - Parameter fileURL: URL of the swift file to execute
     public func runScript(_ fileURL: URL) {
         scriptOutput = []
+        scriptExitCode = nil
         
         currentProcess = Process()
         guard let currentProcess else { return }
