@@ -20,6 +20,7 @@ struct OutputView: View {
                 ForEach(context.scriptOutput, id: \.message) { output in
                     Text(output.message)
                         .foregroundStyle(output.isError ? .red : .primary)
+                        .font(.custom("SF Mono", size: 12))
                         .onTapGesture {
                             if let selection = output.relevantSelection {
                                 handleTextNavigation(to: selection)
@@ -27,6 +28,7 @@ struct OutputView: View {
                         }
                 }
             }
+            .listStyle(.bordered)
             Group {
                 if context.isScriptRunning {
                     Label("Running...", systemImage: "clock")
