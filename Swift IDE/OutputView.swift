@@ -56,6 +56,7 @@ struct OutputView: View {
     private func handleTextNavigation(to lineCol: String) {
         let components = lineCol.split(separator: ":")
         let index: String.Index = document.getIndexAt(line: Int(components[0])!, column: Int(components[1])!)
+        context.isEditorFocused = true
         context.editorTextSelection = TextSelection(insertionPoint: index)
     }
 }

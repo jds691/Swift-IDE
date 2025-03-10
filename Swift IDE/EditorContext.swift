@@ -23,6 +23,7 @@ public class EditorContext {
     var scriptOutput: [ScriptOutput] = []
     var scriptExitCode: Int32? = nil
     
+    var isEditorFocused: Bool = false
     var editorTextSelection: TextSelection?
     
     /// Executes a swift source file and monitors it
