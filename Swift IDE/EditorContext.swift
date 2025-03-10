@@ -19,6 +19,7 @@ public class EditorContext {
     private var currentProcess: Process?
     
     var isScriptRunning: Bool = false
+    // TODO: Seems to be improperly cleared when the contents of the EditorView are modified
     var scriptOutput: [ScriptOutput] = []
     var scriptExitCode: Int32? = nil
     
@@ -50,6 +51,7 @@ public class EditorContext {
         
         currentProcess.standardOutput = standardOutPipe
         currentProcess.standardError = standardErrPipe
+        currentProcess.qualityOfService = .userInitiated
         currentProcess.terminationHandler = { process in
             self.isScriptRunning = false
             self.scriptExitCode = process.terminationStatus
