@@ -35,11 +35,11 @@ struct OutputView: View {
                 } else {
                     if let exitCode = context.scriptExitCode {
                         if exitCode == 0 {
-                            Label("Program exited with code: \(exitCode)", systemImage: "checkmark.circle.fill")
+                            Label("Program finished with exit code \(exitCode).", systemImage: "checkmark.circle.fill")
                                 .symbolRenderingMode(.palette)
                                 .foregroundStyle(.primary, .green)
                         } else {
-                            Label("Program exited with code: \(exitCode)", systemImage: "xmark.circle.fill")
+                            Label("Program finished with exit code \(exitCode).", systemImage: "xmark.circle.fill")
                                 .symbolRenderingMode(.multicolor)
                         }
                     }
@@ -47,9 +47,6 @@ struct OutputView: View {
             }
             .padding(.bottom, 4)
             .frame(maxWidth: .infinity)
-        }
-        .onChange(of: selectedOutput) {
-            print(selectedOutput)
         }
     }
     
