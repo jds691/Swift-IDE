@@ -14,13 +14,6 @@
 			remoteGlobalIDString = 681925AA2D7E06930046D920;
 			remoteInfo = "Swift IDE";
 		};
-		681925CA2D7E06960046D920 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 681925A32D7E06930046D920 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 681925AA2D7E06930046D920;
-			remoteInfo = "Swift IDE";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,7 +32,6 @@
 /* Begin PBXFileReference section */
 		681925AB2D7E06930046D920 /* Swift IDE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift IDE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		681925BF2D7E06960046D920 /* Swift IDETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift IDETests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		681925C92D7E06960046D920 /* Swift IDEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift IDEUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -83,13 +75,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		681925C62D7E06960046D920 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -107,7 +92,6 @@
 			children = (
 				681925AB2D7E06930046D920 /* Swift IDE.app */,
 				681925BF2D7E06960046D920 /* Swift IDETests.xctest */,
-				681925C92D7E06960046D920 /* Swift IDEUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,26 +145,6 @@
 			productReference = 681925BF2D7E06960046D920 /* Swift IDETests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		681925C82D7E06960046D920 /* Swift IDEUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 681925DA2D7E06960046D920 /* Build configuration list for PBXNativeTarget "Swift IDEUITests" */;
-			buildPhases = (
-				681925C52D7E06960046D920 /* Sources */,
-				681925C62D7E06960046D920 /* Frameworks */,
-				681925C72D7E06960046D920 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				681925CB2D7E06960046D920 /* PBXTargetDependency */,
-			);
-			name = "Swift IDEUITests";
-			packageProductDependencies = (
-			);
-			productName = "Swift IDEUITests";
-			productReference = 681925C92D7E06960046D920 /* Swift IDEUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -195,10 +159,6 @@
 						CreatedOnToolsVersion = 16.2;
 					};
 					681925BE2D7E06960046D920 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 681925AA2D7E06930046D920;
-					};
-					681925C82D7E06960046D920 = {
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 681925AA2D7E06930046D920;
 					};
@@ -220,7 +180,6 @@
 			targets = (
 				681925AA2D7E06930046D920 /* Swift IDE */,
 				681925BE2D7E06960046D920 /* Swift IDETests */,
-				681925C82D7E06960046D920 /* Swift IDEUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,13 +193,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		681925BD2D7E06960046D920 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		681925C72D7E06960046D920 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -264,13 +216,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		681925C52D7E06960046D920 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -278,11 +223,6 @@
 			isa = PBXTargetDependency;
 			target = 681925AA2D7E06930046D920 /* Swift IDE */;
 			targetProxy = 681925C02D7E06960046D920 /* PBXContainerItemProxy */;
-		};
-		681925CB2D7E06960046D920 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 681925AA2D7E06930046D920 /* Swift IDE */;
-			targetProxy = 681925CA2D7E06960046D920 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -499,38 +439,6 @@
 			};
 			name = Release;
 		};
-		681925DB2D7E06960046D920 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.neo.Swift-IDEUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Swift IDE";
-			};
-			name = Debug;
-		};
-		681925DC2D7E06960046D920 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.neo.Swift-IDEUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Swift IDE";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -557,15 +465,6 @@
 			buildConfigurations = (
 				681925D82D7E06960046D920 /* Debug */,
 				681925D92D7E06960046D920 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		681925DA2D7E06960046D920 /* Build configuration list for PBXNativeTarget "Swift IDEUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				681925DB2D7E06960046D920 /* Debug */,
-				681925DC2D7E06960046D920 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
