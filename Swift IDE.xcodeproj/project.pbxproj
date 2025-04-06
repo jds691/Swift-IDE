@@ -38,6 +38,7 @@
 		6835A0392DA3020300203A3B /* running-script.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "running-script.png"; sourceTree = "<group>"; };
 		6835A03A2DA3020300203A3B /* script-finished-error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "script-finished-error.png"; sourceTree = "<group>"; };
 		6835A03B2DA3020300203A3B /* script-finished-success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "script-finished-success.png"; sourceTree = "<group>"; };
+		6835A0502DA3028C00203A3B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -89,6 +90,7 @@
 			children = (
 				6835A0362DA3020300203A3B /* README.md */,
 				6835A03C2DA3020300203A3B /* Screenshots */,
+				6835A0502DA3028C00203A3B /* .gitignore */,
 				681925AD2D7E06930046D920 /* Swift IDE */,
 				681925C22D7E06960046D920 /* Swift IDETests */,
 				681925AC2D7E06930046D920 /* Products */,
