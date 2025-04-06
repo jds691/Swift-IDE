@@ -14,6 +14,8 @@ struct OutputView: View {
     
     @State private var selectedOutput: Int = 0
     
+    @State private var showUnableToNavigateToErrorAlert: Bool = false
+    
     var body: some View {
         VStack(alignment: .leading) {
             List {
@@ -48,13 +50,21 @@ struct OutputView: View {
             .padding(.bottom, 4)
             .frame(maxWidth: .infinity)
         }
+        .alert("Unable to navigate to error", isPresented: $showUnableToNavigateToErrorAlert, actions: {}) {
+            Text("Could not determine location of error in script.")
+        }
     }
     
     private func handleTextNavigation(to lineCol: String) {
         let components = lineCol.split(separator: ":")
-        let index: String.Index = document.getIndexAt(line: Int(components[0])!, column: Int(components[1])!)
-        context.isEditorFocused = true
-        context.editorTextSelection = TextSelection(insertionPoint: index)
+        
+        if let line = Int(components[0]), let column = Int(components[1]) {
+            let index: String.Index = document.getIndexAt(line: line, column: column)
+            context.isEditorFocused = true
+            context.editorTextSelection = TextSelection(insertionPoint: index)
+        } else {
+            showUnableToNavigateToErrorAlert = true
+        }
     }
 }
 

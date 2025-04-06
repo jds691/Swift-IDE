@@ -92,7 +92,13 @@ public class EditorContext {
         if let line = String(data: handle.availableData, encoding: .utf8), !line.isEmpty {
             if isError {
                 let components = line.split(separator: ":")
-                let errorOrigin: String = "\(components[1]):\(components[2])"
+                
+                var errorOrigin: String?
+                
+                if components.count >= 3 {                    
+                    errorOrigin = "\(components[1]):\(components[2])"
+                }
+                
                 scriptOutput.append(ScriptOutput(message: line, isError: true, relevantSelection: errorOrigin))
             } else {
                 scriptOutput.append(ScriptOutput(message: line, isError: false))
