@@ -32,6 +32,12 @@
 /* Begin PBXFileReference section */
 		681925AB2D7E06930046D920 /* Swift IDE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift IDE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		681925BF2D7E06960046D920 /* Swift IDETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift IDETests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6835A0362DA3020300203A3B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6835A0372DA3020300203A3B /* document-picker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "document-picker.png"; sourceTree = "<group>"; };
+		6835A0382DA3020300203A3B /* editor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editor.png; sourceTree = "<group>"; };
+		6835A0392DA3020300203A3B /* running-script.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "running-script.png"; sourceTree = "<group>"; };
+		6835A03A2DA3020300203A3B /* script-finished-error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "script-finished-error.png"; sourceTree = "<group>"; };
+		6835A03B2DA3020300203A3B /* script-finished-success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "script-finished-success.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -81,6 +87,8 @@
 		681925A22D7E06930046D920 = {
 			isa = PBXGroup;
 			children = (
+				6835A0362DA3020300203A3B /* README.md */,
+				6835A03C2DA3020300203A3B /* Screenshots */,
 				681925AD2D7E06930046D920 /* Swift IDE */,
 				681925C22D7E06960046D920 /* Swift IDETests */,
 				681925AC2D7E06930046D920 /* Products */,
@@ -94,6 +102,18 @@
 				681925BF2D7E06960046D920 /* Swift IDETests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6835A03C2DA3020300203A3B /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				6835A0372DA3020300203A3B /* document-picker.png */,
+				6835A0382DA3020300203A3B /* editor.png */,
+				6835A0392DA3020300203A3B /* running-script.png */,
+				6835A03A2DA3020300203A3B /* script-finished-error.png */,
+				6835A03B2DA3020300203A3B /* script-finished-success.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
